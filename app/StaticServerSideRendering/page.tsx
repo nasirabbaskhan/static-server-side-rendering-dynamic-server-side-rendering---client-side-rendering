@@ -3,7 +3,7 @@ const getBooks = async () => {
   try {
     const res = await fetch("https://api.quotable.io/random?tags=technology");
     const response = await res.json();
-    console.log("statusg", res.ok);
+
     return response;
   } catch (error: any) {
     return { error: error.message };
@@ -12,7 +12,7 @@ const getBooks = async () => {
 
 export default async function Home() {
   const books = await getBooks();
-  console.log(books);
+
   if (books.error) {
     return <p>Sorry API has some error</p>;
   }

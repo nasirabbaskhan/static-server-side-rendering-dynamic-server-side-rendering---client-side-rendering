@@ -7,7 +7,7 @@ const getBooks = async () => {
       cache: "no-store",
     });
     const response = await res.json();
-    console.log("statusg", res.ok);
+
     return response;
   } catch (error: any) {
     return { error: error.message };
@@ -16,7 +16,7 @@ const getBooks = async () => {
 
 export default async function Home() {
   const books = await getBooks();
-  console.log(books);
+
   if (books.error) {
     return <p>Sorry API has some error</p>;
   }

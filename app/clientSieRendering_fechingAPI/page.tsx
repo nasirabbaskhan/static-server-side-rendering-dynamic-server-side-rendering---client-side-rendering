@@ -11,9 +11,6 @@ const fetcher = (url: any) => {
 
 export default function Home() {
   const { data, error, isLoading } = useSWR(url, fetcher);
-  console.log("aneela data", data);
-  console.log("aneela loading", isLoading);
-  console.log("aneela error", error);
 
   if (error) return <div>Some Thing have error</div>;
   if (isLoading) return <div>Loading....</div>;
