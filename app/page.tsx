@@ -1,5 +1,6 @@
 "use client";
 import useSWR from "swr";
+
 //-----------------------Static Side Generation without (no-cathe)-----------------------------------------
 
 // Static Side Generation
