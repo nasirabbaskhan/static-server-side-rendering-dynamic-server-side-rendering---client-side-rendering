@@ -4,7 +4,7 @@
 const getBooks = async () => {
   try {
     const res = await fetch("https://api.quotable.io/random?tags=technology", {
-      cache: "no-cache",
+      cache: "no-store",
     });
     const response = await res.json();
     console.log("statusg", res.ok);
